@@ -1,2 +1,3 @@
 # mahou
-A package full of tricks... sorry, full of IPython magic commands
+
+A package full of tricks... sorry, full of IPython magic commands.
