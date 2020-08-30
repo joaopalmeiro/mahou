@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+# added by check_manifest.py
+include *.ipynb
+include *.lock
+include Pipfile

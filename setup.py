@@ -49,6 +49,7 @@ setup(
     ],
     license="MIT",
     keywords="formatter, ipython, black, jupyter, notebook, magic",
+    include_package_data=True,
     install_requires=["black", "ipython"],
     python_requires=">=3.6, <=3.8",
     project_urls={

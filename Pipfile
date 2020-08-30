@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 jupyter = "*"
+check-manifest = "*"
 
 [packages]
 mahou = {editable = true, path = "."}
