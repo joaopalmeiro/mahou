@@ -2,7 +2,8 @@ from functools import partial
 
 from black import DEFAULT_LINE_LENGTH, FileMode, format_str
 from IPython.core import magic_arguments
-from IPython.core.debugger import set_trace
+
+# from IPython.core.debugger import set_trace
 from IPython.core.magic import Magics, cell_magic, magics_class
 
 from .utils import MagicArgumentDefaultsHelpFormatter
@@ -42,8 +43,6 @@ class Formatter(Magics):
     @cell_magic
     def black(self, line, cell):
         args = magic_arguments.parse_argstring(self.black, line)
-
-        set_trace()
 
         # More info about the `--target-version` option: https://github.com/psf/black/issues/751
         mode = FileMode(
