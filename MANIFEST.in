@@ -8,4 +8,5 @@ prune .vscode
 # added by check_manifest.py
 include *.ipynb
 include *.lock
+include Makefile
 include Pipfile
