@@ -1,3 +1,5 @@
+from functools import partial
+
 from black import DEFAULT_LINE_LENGTH, FileMode, format_str
 from IPython.core import magic_arguments
 from IPython.core.debugger import set_trace
@@ -8,10 +10,11 @@ from .utils import MagicArgumentDefaultsHelpFormatter
 
 @magics_class
 class Formatter(Magics):
-    @magic_arguments.magic_arguments(name=r"%black")
+    @magic_arguments.magic_arguments()
     @magic_arguments.kwds(
         description="IPython cell magic to format code cells using Black.",
-        formatter_class=MagicArgumentDefaultsHelpFormatter,
+        formatter_class=partial(MagicArgumentDefaultsHelpFormatter, magic_prefix="%%"),
+        epilog="For more info about Black, please check: https://github.com/psf/black",
     )
     @magic_arguments.argument(
         "-l",
