@@ -1,5 +1,6 @@
 include README.md
 include LICENSE
+prune .vscode
 # added by check_manifest.py
 include *.ipynb
 include *.lock
